@@ -3,27 +3,33 @@
  
 const bread = [
     {
-    type: "white",
+    type: "White",
     color: "white",
     price: 1,
-    id: 1,
+    breadId: 1,
     },
     {
     type: "Wheat",
     color: "brown",
     price: 5,
-    id: 2,
+    breadId: 2,
     },
     {
     type: "Rye",
     color: "Dark Brown",
     price: 7,
-    id: 3,
+    breadId: 3,
     }
 ]
+let selectedBreadId = '';
+
+const setSelectedBread = (breadId) => {
+  selectedBreadId = breadId;
+  console.log('selectedBreadId', selectedBreadId);
+};
 
 const getBread = () => {
     return bread;
 };
 
-export default { getBread }
+export default { setSelectedBread, getBread }
